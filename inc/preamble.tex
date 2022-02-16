@@ -83,8 +83,8 @@
     \AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
 \makeatother
 \setlist{nolistsep} % Нет отступов между пунктами списка
-\renewcommand{\labelitemi}{--} % Маркет списка --
-\renewcommand{\labelenumi}{\asbuk{enumi})} % Список второго уровня
+\renewcommand{\labelitemi}{•} % Маркет списка --
+\renewcommand{\labelenumi}{\arabic{enumi})} % Список второго уровня
 \renewcommand{\labelenumii}{\arabic{enumii})} % Список третьего уровня
 
 % Содержание
@@ -168,7 +168,7 @@
 \usepackage[compact,explicit]{titlesec}
 
 \titleformat{\section}{\bfseries}{}{12.5mm}{\centering{\thesection\quad\MakeTextUppercase{#1}}\vspace{1.5em}}
-\titleformat{\subsection}[block]{\vspace{1em}}{}{12.5mm}{\thesubsection\quad#1\vspace{1em}}
+\titleformat{\subsection}[block]{\bfseries\vspace{-1.5em}}{}{12.5mm}{\thesubsection\quad#1\vspace{1em}}
 \titleformat{\subsubsection}[block]{\vspace{1em}\normalsize}{}{12.5mm}{\thesubsubsection\quad#1\vspace{1em}}
 \titleformat{\paragraph}[block]{\normalsize}{}{12.5mm}{\MakeTextUppercase{#1}}
 
@@ -204,3 +204,5 @@
 \makeatother
 
 \setcounter{page}{2} % Начало нумерации страниц
+
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}} 
